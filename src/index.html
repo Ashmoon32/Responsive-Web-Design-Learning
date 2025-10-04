@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Responsive Web Design</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: lightblue;
+            border: 2px solid black;
+        }
+
+        .box {
+            width: 90%;
+            padding: 20px;
+            background-color: white;
+            margin: 10px 0;
+            text-align: center;
+            border: 2px solid black;
+
+        }
+
+        @media (min-width: 600px) {
+            .container {
+                flex-direction: row;
+                justify-content: center;
+                background-color: lightgreen;
+            }
+
+            .box {
+                width: 30%;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .container {
+                background-color: lightcoral;
+                justify-content: space-between;
+                padding: 40px;
+            }
+
+            .box {
+                width: 25%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+    </div>
+
+</body>
+
+</html>
